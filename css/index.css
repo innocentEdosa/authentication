@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+form {
+    max-width: 360px;
+    margin: auto;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.label + .label {
+    margin-top: 20px;
+}
+
+.label > span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.label  input{
+    padding: 10px 16px;
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+.password_input_wrapper {
+    position: relative;
+}
+
+.password_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.password_btn[data-passwordlock="isLocked"] > .unlocked {
+display: none;
+}
+
+.password_btn[data-passwordlock="isUnLocked"] > .locked {
+display: none;
+}
